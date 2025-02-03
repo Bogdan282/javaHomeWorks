@@ -3,20 +3,22 @@ package app;
 public class Main {
     public static void main(String[] args) {
         int days;
-        double totalEUR, byDay;
+        float totalEUR, byDay;
+
+        //Вираховування загального прибутку маючи кількість днів та прибуток за 1 день
 
         days = 5;
-        byDay = 2430.68;
+        byDay = 2430.68f;
         totalEUR = days * byDay;
-        System.out.printf("Product No 1: smartphone,%n" +
-                "total sales for %d days is EUR %,.2f,%n" +
-                "sales by day is EUR %,.2f.%n", days, totalEUR, byDay);
+        System.out.println("Product No 1: smartphone," +
+                "\ntotal sales for " + days + " days is EUR " + totalEUR + "," +
+                "\nsales by day is EUR " + byDay + ".");
 
         days = 7;
-        byDay = 1498.12;
+        byDay = 1498.12f;
         totalEUR = days * byDay;
-        System.out.printf("Product No 2: laptop,%n" +
-                "total sales for %d days is EUR %,.2f,%n" +
-                "sales by day is EUR %,.2f.%n", days, totalEUR, byDay);
+        System.out.println("Product No 2: laptop," +
+                "\ntotal sales for " + days + " days is EUR " + totalEUR + "," +
+                "\nsales by day is EUR " + byDay + ".");
     }
 }
