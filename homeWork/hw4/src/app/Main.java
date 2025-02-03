@@ -10,15 +10,15 @@ public class Main {
         days = 5;
         totalEUR = 12153.41f;
         byDay = totalEUR / days;
-        System.out.println("Product No 1: smartphone,");
-        System.out.println("total sales for " + days + " days is EUR " + totalEUR + ",");
-        System.out.println("sales by day is EUR " + byDay + ".");
+        System.out.println("Product No 1: smartphone," +
+                "\ntotal sales for " + days + " days is EUR " + totalEUR + "," +
+                "\nsales by day is EUR " + byDay + ".");
 
         days = 7;
         totalEUR = 10486.85f;
         byDay = totalEUR / days;
-        System.out.println("Product No 2: laptop,");
-        System.out.println("total sales for " + days + " days is EUR " + totalEUR + ",");
-        System.out.println("sales by day is EUR " + byDay + ".");
+        System.out.println("Product No 1: smartphone," +
+                "\ntotal sales for " + days + " days is EUR " + totalEUR + "," +
+                "\nsales by day is EUR " + byDay + ".");
     }
 }
