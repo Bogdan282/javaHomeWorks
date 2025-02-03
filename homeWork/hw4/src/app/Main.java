@@ -17,7 +17,7 @@ public class Main {
         days = 7;
         totalEUR = 10486.85f;
         byDay = totalEUR / days;
-        System.out.println("Product No 1: smartphone," +
+        System.out.println("Product No 2: laptop," +
                 "\ntotal sales for " + days + " days is EUR " + totalEUR + "," +
                 "\nsales by day is EUR " + byDay + ".");
     }
