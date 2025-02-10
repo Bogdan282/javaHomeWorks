@@ -32,7 +32,7 @@ public class Main {
 */
     }
     public static void taxRate(int money){
-        double taxRate = (money <= 10000) ? 2.5 : (money > 10000 && money <= 25000) ? 4.3 : 6.7;
+        double taxRate = (money <= 10000) ? 2.5 : (money <= 25000) ? 4.3 : 6.7;
         System.out.println("Вся сума: " + money);
         System.out.println("Відсоток податку: " + taxRate);
         System.out.println("Сума податку: " + (money * taxRate / 100));
