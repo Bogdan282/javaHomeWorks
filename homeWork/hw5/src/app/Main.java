@@ -5,7 +5,7 @@ import javax.xml.transform.stax.StAXResult;
 
 public class Main {
     public static void main(String[] args) {
-        int money;
+//        int money;
 
         System.out.println("Доходи оподатковуются за прогресивною шкалою оподаткування: \n" +
                 "від 0 до 10000, включно, за ставкою 2,5%.\n" +
