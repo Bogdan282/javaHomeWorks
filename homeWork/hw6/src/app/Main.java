@@ -23,6 +23,7 @@ public class Main {
         for (int i = 1; i <= 6; i++){
             System.out.println(i + ") Num is " + i +", sum is " + Rozrah(i));
         }
+        System.out.println("Sum of numbers is " + Rozrah(6));
     }
 
     public static int Rozrah(int Num) {
