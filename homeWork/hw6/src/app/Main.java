@@ -12,7 +12,7 @@ public class Main {
         //6) Num is 6, sum is 21
         //Sum of numbers is 21
 
-/*        System.out.println("1) Num is 1, sum is " + Rozrah(1));
+/*      System.out.println("1) Num is 1, sum is " + Rozrah(1));
         System.out.println("2) Num is 2, sum is " + Rozrah(2));
         System.out.println("3) Num is 3, sum is " + Rozrah(3));
         System.out.println("4) Num is 4, sum is " + Rozrah(4));
