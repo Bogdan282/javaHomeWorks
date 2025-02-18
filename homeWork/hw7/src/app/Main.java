@@ -70,7 +70,7 @@ public class Main {
                 minElementIndex = i;
             }
         }
-        System.out.println("Найменше число в масиві: " +minElement + ". Його йндекс: " + minElementIndex);
+        System.out.println("Найменше число в масиві: " + minElement + ". Його індекс: " + minElementIndex);
 
         for (int i = 0; i < Num.length; i++) {
             if (Num[i] < 0) {
