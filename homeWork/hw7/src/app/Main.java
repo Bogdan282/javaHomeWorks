@@ -1,6 +1,7 @@
 package app;
 
 import java.util.Arrays;
+import java.util.SortedMap;
 
 public class Main {
     public static void main(String[] args) {
@@ -26,10 +27,64 @@ public class Main {
         int[] Num= new int[20];
         int min = -100;
         int max = 100;
+        int sumMinus = 0;
+        int pairCount = 0;
+        int maxElement = 0;
+        int maxElementIndex = 0;
+        int minElement = Num[1];
+        int minElementIndex = 0;
+        int firstMinusIndex = 0;
+        int avarage = 0;
 
         for (int i = 0; i < Num.length; i++) {
             Num[i] = min + (int) (Math.random() * (max - min + 1));
         }
-        System.out.println(Arrays.toString(Num));
+        System.out.println("Елементи масиву: " + Arrays.toString(Num));
+
+        for (int i =0; i < Num.length; i++) {
+            if (Num[i] < 0) {
+                sumMinus += Num[i];
+            }
+        }
+        System.out.println("Сума всіх від'ємних чисел: " + sumMinus);
+
+        for (int i = 0; i < Num.length; i++) {
+            if (Num[i] % 2 == 0) {
+                pairCount ++;
+            }
+        }
+        System.out.println("Кількість парних чисел: " + pairCount);
+        System.out.println("Кількість непарних чисел: " + (Num.length - pairCount));
+
+        for (int i = 0; i < Num.length; i++) {
+            if (Num[i] > maxElement) {
+                maxElement = Num[i];
+                maxElementIndex = i;
+            }
+        }
+        System.out.println("Найбільше число в масиві: " + maxElement + ". Його індекс: " + maxElementIndex);
+
+        for (int i = 0; i < Num.length; i++) {
+            if (minElement > Num[i]) {
+                minElement = Num[i];
+                minElementIndex = i;
+            }
+        }
+        System.out.println("Найменше число в масиві: " +minElement + ". Його йндекс: " + minElementIndex);
+
+        for (int i = 0; i < Num.length; i++) {
+            if (Num[i] < 0) {
+                firstMinusIndex = i;
+                break;
+            }
+        }
+        if (firstMinusIndex == -1) {
+            System.out.printf("В масиві немає від'ємних чисел.");
+        } else {
+            for (int i = firstMinusIndex; i < Num.length; i++) {
+                avarage += Num[i];
+            }
+            System.out.println("Середнє арифметичне після першого від'ємного числа: " + (avarage / (Num.length - firstMinusIndex)));
+        }
     }
 }
