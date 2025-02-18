@@ -1,5 +1,7 @@
 package app;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         //Створіть Java програму, яка виконує наступні завдання:
@@ -21,6 +23,13 @@ public class Main {
         //Найбільший елемент: 99 (з індексом 14)
         //Середнє арифметичне чисел після першого від'ємного числа: 20.39
 
+        int[] Num= new int[20];
+        int min = -100;
+        int max = 100;
 
+        for (int i = 0; i < Num.length; i++) {
+            Num[i] = min + (int) (Math.random() * (max - min + 1));
+        }
+        System.out.println(Arrays.toString(Num));
     }
 }
