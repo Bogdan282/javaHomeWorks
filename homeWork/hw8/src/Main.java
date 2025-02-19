@@ -28,5 +28,32 @@ public class Main {
             Num[i] = min + (int) (Math.random() * (max - min + 1));
         }
         System.out.println("Елементи масиву: " + Arrays.toString(Num));
+        sort(Num);
+        System.out.println("Відсортований масив: " + Arrays.toString(Num));
+        find(Num, 10);
+    }
+    public static void sort(int[] Num) {
+        for (int i = 1; i < Num.length; i++) {  // Починає перевіряти з другого числа в масиві
+            int key = Num[i];                   // Число з якого починається перевірка
+            int j = i - 1;                      // Попереднє число
+
+            while (j >= 0 && Num[j] > key) {    // Якщо попереднє число більше ніж число з якого почалась перевірка
+                Num[j + 1] = Num[j];            // Міняємо місяцями
+                j--;
+            }
+            Num [j + 1] = key;                  // Здвигаємо перевірку далі
+        }
+    }
+    public static void find(int[] Num, int x) {
+        boolean find = false;
+        for (int i = 0; i < Num.length; i++) {
+            if (x == Num[i]) {
+                System.out.println("Індекс числа " + x + " у пошуку: " + i);
+                find = true;
+            }
+        }
+        if (find != true) {
+            System.out.println("Такого числа в масиві немає.");
+        }
     }
 }
