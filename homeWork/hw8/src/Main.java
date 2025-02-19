@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         //Створіть Java програму, яка виконує наступні завдання, використовуючи одновимірний масив:
@@ -18,6 +20,13 @@ public class Main {
         //
         //Введіть число для пошуку: 34 Індекс числа 34 у відсортованому масиві: 5
 
+        int[] Num = new int[15];
+        int min = 1;
+        int max = 100;
 
+        for (int i = 0; i < Num.length; i++) {
+            Num[i] = min + (int) (Math.random() * (max - min + 1));
+        }
+        System.out.println("Елементи масиву: " + Arrays.toString(Num));
     }
 }
