@@ -35,6 +35,8 @@ public class Main {
         System.out.println("Квадрат числа " + num + " дорівнює " + numQuad(num));
 
         CylGet();
+        printMasivCalc();
+
     }
     public static int numQuad(int num){
         return num * num;
@@ -50,5 +52,34 @@ public class Main {
         System.out.print("2.1 Введіть радіус циліндру: ");
         double cylRad = scn.nextDouble();
         System.out.println("2.2 Об'єм циліндра з радіусом " + cylRad + " і висотою " + cylHigh + " дорівнює "+ Cyl(cylRad,cylHigh) + ".");
+    }
+    public static int masivCalc(int num1, int num2, int num3, int num4, int num5){
+        int[] masivNum = new int[5];
+        masivNum[0] = num1;
+        masivNum[1] = num2;
+        masivNum[2] = num3;
+        masivNum[3] = num4;
+        masivNum[4] = num5;
+        int totalNum = 0;
+        for (int i = 0; i < masivNum.length; i++) {
+            totalNum += masivNum[i];
+        }
+        return totalNum;
+    }
+    public static void printMasivCalc(){
+        Scanner scn = new Scanner(System.in);
+        System.out.print("Введіть перше число: ");
+        int num1 = scn.nextInt();
+        System.out.print("Введіть друге число: ");
+        int num2 = scn.nextInt();
+        System.out.print("Введіть третє число: ");
+        int num3 = scn.nextInt();
+        System.out.print("Введіть четверте число: ");
+        int num4 = scn.nextInt();
+        System.out.print("Введіть п'яте: ");
+        int num5 = scn.nextInt();
+
+        masivCalc(num1, num2, num3, num4, num5);
+        System.out.println("Сума введених чисел: " + masivCalc(num1, num2, num3, num4, num5));
     }
 }
