@@ -1,3 +1,4 @@
+import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 
 public class Main {
@@ -38,6 +39,7 @@ public class Main {
         printMasivCalc();
         backWord();
         degreeNum();
+        stringPrint();
 
     }
     public static int numQuad(int num){
@@ -94,7 +96,7 @@ public class Main {
         }
         System.out.println("Рядок в зворотньому порядку: " + backWord2);
     }
-    public static void degreeNum(){
+    public static void degreeNum() {
         Scanner scn = new Scanner(System.in);
 
         System.out.print("5. Введіть число яке хочете піднести до степеня: ");
@@ -107,5 +109,17 @@ public class Main {
             finalNum *= num;
         }
         System.out.println("Число " + num + " в степіні " + degree + " дорювнює " + finalNum);
+    }
+    public static void stringPrint() {
+        Scanner scn = new Scanner(System.in);
+
+        System.out.print("6. Введіть рядок який бажаєте дублювати: ");
+        String word = scn.nextLine();
+        System.out.print("введіть скільки разів бажаєте повторити рядок: ");
+        int num = scn.nextInt();
+
+        for (int i = 0; i < num; i++) {
+            System.out.println(word);
+        }
     }
 }
