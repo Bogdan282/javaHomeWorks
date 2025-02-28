@@ -36,6 +36,8 @@ public class Main {
 
         CylGet();
         printMasivCalc();
+        backWord();
+        degreeNum();
 
     }
     public static int numQuad(int num){
@@ -68,7 +70,7 @@ public class Main {
     }
     public static void printMasivCalc(){
         Scanner scn = new Scanner(System.in);
-        System.out.print("Введіть перше число: ");
+        System.out.print("3. Введіть перше число: ");
         int num1 = scn.nextInt();
         System.out.print("Введіть друге число: ");
         int num2 = scn.nextInt();
@@ -81,5 +83,29 @@ public class Main {
 
         masivCalc(num1, num2, num3, num4, num5);
         System.out.println("Сума введених чисел: " + masivCalc(num1, num2, num3, num4, num5));
+    }
+    public static void backWord() {
+        Scanner scn = new Scanner(System.in);
+        System.out.print("4. Введіть рядок: ");
+        String word = scn.nextLine();
+        String backWord2 = "";
+        for(int i = word.length() - 1; i >= 0; i--) {
+            backWord2 += word.charAt(i);
+        }
+        System.out.println("Рядок в зворотньому порядку: " + backWord2);
+    }
+    public static void degreeNum(){
+        Scanner scn = new Scanner(System.in);
+
+        System.out.print("5. Введіть число яке хочете піднести до степеня: ");
+        int num = scn.nextInt();
+        System.out.print("Введіть степінь до якого бажаєте піднести: ");
+        int degree = scn.nextInt();
+        int finalNum = 1;
+
+        for (int i = 0; i < degree; i++){
+            finalNum *= num;
+        }
+        System.out.println("Число " + num + " в степіні " + degree + " дорювнює " + finalNum);
     }
 }
