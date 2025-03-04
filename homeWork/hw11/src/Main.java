@@ -1,3 +1,5 @@
+import com.sun.tools.attach.AgentInitializationException;
+
 public class Main {
     public static void main(String[] args) {
     //Створіть Java програму з використанням класів та конструкторів, яка виконує наступні завдання:
@@ -15,6 +17,18 @@ public class Main {
         //   (Після оновлення професії)
         //   Ім'я: Alice, Вік: 28, Професія: Дизайнер
 
+        Person john = new Person("John", "Інженер", 30);
+        Person marry = new Person("Mary", "Вчитель", 25);
+        Person bob = new Person("Bob", "Лікар", 35);
+        Person alice = new Person("Alice", "Архітектор", 28);
 
+        System.out.println(john);
+        System.out.println(marry);
+        System.out.println(bob);
+
+        System.out.println(alice);
+        System.out.println("Після оновлення професії: ");
+        alice.setProfession("Дизайнер");
+        System.out.println(alice);
     }
 }
