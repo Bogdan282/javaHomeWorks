@@ -11,7 +11,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Ім'я: " + name + ", Вік: " + age + ", Професі: " + profession;
+        return "Ім'я: " + name + ", Вік: " + age + ", Професія: " + profession;
     }
 
     public void setProfession(String profession) {
